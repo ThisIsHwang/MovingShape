@@ -68,20 +68,14 @@ void CMovingShapeView::OnDraw(CDC* pDC)
 	pDoc->m_UserRect.SetDC(&dc);
 	pDoc->m_UserElip.SetDC(&dc);
 
-	dc.SelectObject(pDoc->m_UserLine.m_Pen);
+	pDoc->m_UserLine.SetPenBrush();
 	pDoc->m_UserLine.DrawShape();
 
-
-	dc.SelectObject(pDoc->m_UserElip.m_Pen);
-	dc.SelectObject(pDoc->m_UserElip.m_Brush);
+	pDoc->m_UserElip.SetPenBrush();
 	pDoc->m_UserElip.DrawShape();
 
-	dc.SelectObject(pDoc->m_UserRect.m_Pen);
-	dc.SelectObject(pDoc->m_UserRect.m_Brush);
+	pDoc->m_UserRect.SetPenBrush();
 	pDoc->m_UserRect.DrawShape();
-	
-	
-
 }
 
 

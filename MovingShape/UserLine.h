@@ -31,8 +31,6 @@ public:
 		 SetPenBrush();
 		 ChangeClientRect(wnd);
 		 SetRand();
-
-		m_MovingDegree -= 60;
 		m_StartPoint = CPoint(0, (*m_ClientRect).bottom / 2);
 		m_EndPoint = CPoint(m_StartPoint.x + m_ShapeLength * cos(m_MovingDegree * (PI / 180)), m_StartPoint.y + m_ShapeLength * sin(m_MovingDegree * (PI / 180)));
 

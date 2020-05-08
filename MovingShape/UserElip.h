@@ -7,8 +7,9 @@ public:
 
 	UserElip() {
 		m_ClientRect = new CRect();
-		m_MovingDegree = rand() % 121 - 60 + 270;
-		m_Pen.CreatePen(PS_SOLID, 1, RGB(rand() % 256, rand() % 256, rand() % 256));
+		SetRand();
+		m_MovingDegree += 270;
+		m_Pen.CreatePen(PS_SOLID, 5, RGB(rand() % 256, rand() % 256, rand() % 256));
 		m_ShapeLength = 20;
 		m_Brush.CreateSolidBrush(RGB(255, 0, 0));
 	}
